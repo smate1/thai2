@@ -4,3 +4,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		document.querySelector('main').classList.toggle('gray')
 	})
 })
+
+window.addEventListener(
+	'mousewheel',
+	function (e) {
+		if (e.ctrlKey) {
+			e.preventDefault()
+			return false
+		}
+	},
+	{ passive: false }
+)
